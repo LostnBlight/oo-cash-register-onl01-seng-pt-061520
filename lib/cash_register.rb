@@ -3,8 +3,8 @@ class CashRegister
   
   def initialize(discount = 0)
     @total = 0
-    @apply_discount = discount
-    @items= []
+    @discount = discount
+    @items = []
   end
   
   def item_added(title, price, quantity = 1)
@@ -22,4 +22,6 @@ class CashRegister
   @total
 end
 
-def 
+def apply_discount()
+  if @discount > 0
+    @discount = @discount/100.to_f
