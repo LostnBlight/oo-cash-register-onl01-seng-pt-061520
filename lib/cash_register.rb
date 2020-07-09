@@ -5,13 +5,13 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
-    @transactions = transactions
+    # @transactions = transactions
   end
   
   def add_item(item, price, quantity = 1)
     @price = price
     @total += price * quantity
-    @transactions = price * quantity
+   # @transactions = price * quantity
     if quantity > 1
       i = 0
       while i<quantity
