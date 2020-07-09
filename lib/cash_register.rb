@@ -26,4 +26,13 @@ def apply_discount()
   if @discount > 0
     @discount_amount = (price * discount)/100
     @total -= @discount_amount
-    return
+    return "After the discount, the total comes to $#{total}."
+  else
+    puts "There is no discount to apply"
+  end
+end
+
+def void_last_transaction
+  @total -= @transactions
+end
+
